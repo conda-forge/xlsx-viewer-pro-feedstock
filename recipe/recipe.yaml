@@ -1,5 +1,5 @@
 context:
-  version: "1.0.7"
+  version: "1.0.9"
 
 package:
   name: xlsx-viewer-pro
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/x/xlsx-viewer-pro/xlsx_viewer_pro-${{ version }}.tar.gz
-  sha256: 3ec7652133b26146f05312f0fcf88a46e9b62a9ace7ba3232b487f1b06042469
+  sha256: 66eb8a62fb120ebe40bc4094ba5fdae52943ec170a74dd811a59ed33bf198a2f
 
 build:
   number: 0
