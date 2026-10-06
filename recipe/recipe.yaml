@@ -1,5 +1,5 @@
 context:
-  version: "1.0.9"
+  version: "1.1.0"
 
 package:
   name: xlsx-viewer-pro
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/x/xlsx-viewer-pro/xlsx_viewer_pro-${{ version }}.tar.gz
-  sha256: 66eb8a62fb120ebe40bc4094ba5fdae52943ec170a74dd811a59ed33bf198a2f
+  sha256: 43fe1965e2308ddaf4ae694b9f1702d5c3a4526b5e4dd925e00a72ba3fba7044
 
 build:
   number: 0
@@ -22,6 +22,7 @@ requirements:
   run:
     - python >=${{ python_min }}
     - openpyxl >=3.1.0
+    - ttkbootstrap >=1.17.0
 
 tests:
   - python:
@@ -30,9 +31,11 @@ tests:
         - "*"
       imports:
         - xlsx_viewer
+        - xlsx_viewer.mcp_server
       pip_check: true
   - script:
       - python -m xlsx_viewer.cli --help
+      - python -m xlsx_viewer.mcp_server --help
 
 about:
   homepage: https://github.com/eminsk/xlsx_vievers
